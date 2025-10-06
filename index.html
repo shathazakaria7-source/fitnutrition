@@ -8,11 +8,7 @@
 body { 
   font-family: Arial, sans-serif; 
   line-height: 1.6; 
-  background-color: #ffe6f0;
-  background-image: url('f72169b3-1136-46b0-a6d1-524cddea1802.png'); /* رابط الصورة النسبي */
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #ffe6f0, #ffd1e6); 
   color: #333; 
   padding: 20px; 
   margin:0;
@@ -54,7 +50,6 @@ h1, h2, h3 { color: #d6336c; }
 
 .tabcontent { display: none; padding: 10px 0; border-top: none; }
 
-/* Responsive */
 @media (max-width: 768px) {
   body { padding: 10px; }
   .tabs button { font-size: 14px; padding: 10px 12px; }
@@ -70,10 +65,10 @@ h1, h2, h3 { color: #d6336c; }
   <button class="tablinks" onclick="openTab(event,'BlackSeed')" id="defaultOpen">Z. Black Seed / زيت حبة البركة</button>
   <button class="tablinks" onclick="openTab(event,'Dates')">Fresh Dates / تمر طبيعي</button>
   <button class="tablinks" onclick="openTab(event,'VitaminC')">Vitamin C Chewable / حلوى فيتامين ج</button>
-  <button class="tablinks" onclick="openTab(event,'DiscountCodes')">Discount Codes / كودات الخصم</button>
+  <button class="tablinks" onclick="openTab(event,'DiscountCodes')">كودات الخصم</button>
 </div>
 
-<!-- مقال 1: Black Seed -->
+<!-- Black Seed -->
 <div id="BlackSeed" class="tabcontent">
 <h2>Maju Superfoods Black Seed Oil Gummies — كبسولات زيت حبة البركة</h2>
 <h3>EN: Introduction</h3>
@@ -102,7 +97,7 @@ h1, h2, h3 { color: #d6336c; }
 <button class="vote-no">❌ لا</button>
 </div>
 
-<!-- مقال 2: Dates -->
+<!-- Dates -->
 <div id="Dates" class="tabcontent">
 <h2>Natural Delights Fresh Dates — تمر طبيعي</h2>
 <h3>EN: Introduction</h3>
@@ -131,7 +126,7 @@ h1, h2, h3 { color: #d6336c; }
 <button class="vote-no">❌ لا</button>
 </div>
 
-<!-- مقال 3: Vitamin C -->
+<!-- Vitamin C -->
 <div id="VitaminC" class="tabcontent">
 <h2>California Gold Nutrition Vitamin C Chewable — حلوى فيتامين ج</h2>
 <h3>EN: Introduction</h3>
@@ -158,34 +153,29 @@ h1, h2, h3 { color: #d6336c; }
 <button class="vote-no">❌ لا</button>
 </div>
 
-<!-- مقال 4: Discount Codes -->
+<!-- Discount Codes -->
 <div id="DiscountCodes" class="tabcontent">
-  <h2>Discount Code / كود الخصم</h2>
-  <p>Use this code when shopping on iHerb to get your discount:</p>
-  <h3 style="color:#ff4d88; font-size:1.5em;">IMN3104</h3>
-  <p>استخدم هذا الكود عند التسوق على iHerb للحصول على الخصم:</p>
-  <p>
-    <a href="https://jo.iherb.com/" class="btn" target="_blank">Shop on iHerb / تسوق على iHerb</a>
-    <button class="btn" onclick="copyCode()">Copy Code / انسخ الكود</button>
-  </p>
+<h2>كود الخصم</h2>
+<p>استخدم الكود التالي للحصول على خصم عند الشراء من iHerb:</p>
+<h3 style="color:#ff4d88; font-size:1.5em;">IMN3104</h3>
+<button class="btn" onclick="copyCode()">Copy Code / انسخ الكود</button>
+<a href="https://jo.iherb.com/" class="btn" target="_blank">Shop on iHerb / تسوق على iHerb</a>
 </div>
 
 <script>
-function openTab(evt, tabName) {
+function openTab(evt, tabName){
   var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i=0;i<tabcontent.length;i++){ tabcontent[i].style.display="none"; }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i=0;i<tablinks.length;i++){ tablinks[i].className = tablinks[i].className.replace(" active",""); }
+  tabcontent=document.getElementsByClassName("tabcontent");
+  for(i=0;i<tabcontent.length;i++){tabcontent[i].style.display="none";}
+  tablinks=document.getElementsByClassName("tablinks");
+  for(i=0;i<tablinks.length;i++){tablinks[i].className=tablinks[i].className.replace(" active","");}
   document.getElementById(tabName).style.display="block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className+=" active";
 }
 document.getElementById("defaultOpen").click();
 
-function copyCode() {
-  navigator.clipboard.writeText('IMN3104').then(() => {
-    alert('Code copied! / تم نسخ الكود!');
-  });
+function copyCode(){
+  navigator.clipboard.writeText("IMN3104").then(()=>{alert("تم نسخ الكود!");});
 }
 </script>
 
