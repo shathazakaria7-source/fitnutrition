@@ -1,70 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fit Nutrition – فيت نيوتريشين</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fit Nutrition - منتجات صحية ومكملات طبيعية</title>
+<style>
+body { 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  background-color: #e8f5e9;
+  color: #333; 
+  padding: 20px; 
+  margin:0;
+}
+h1, h2, h3 { color: #2e7d32; }
+.btn { 
+  background-color: #43a047; 
+  color: white; 
+  padding: 10px 20px; 
+  text-decoration: none; 
+  border-radius: 8px; 
+  display: inline-block; 
+  margin: 10px 0; 
+}
+.vote-yes, .vote-no { 
+  padding: 6px 12px; 
+  margin: 5px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.vote-yes { background-color: #43a047; color: white; }
+.vote-no { background-color: #e53935; color: white; }
+.tabs { overflow: hidden; background-color: #2e7d32; border-radius: 8px; margin-bottom: 20px; }
+.tabs button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; color:white; font-size:16px; transition: 0.3s; }
+.tabs button:hover { background-color: #43a047; }
+.tabs button.active { background-color: #43a047; }
+.tabcontent { display: none; padding: 10px 0; border-top: none; }
+
+/* صور المنتجات */
+.product-img { max-width: 200px; display:block; margin:10px 0; border-radius:8px; }
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="brand">
-      <div class="logo">FN</div>
-      <div>
-        <div class="site-title">Fit Nutrition <span class="small">فيت نيوتريشين</span></div>
-        <div class="small">Trusted nutrition tips • نصائح تغذوية موثوقة</div>
-      </div>
-    </div>
 
-    <div class="nav">
-      <a class="header-link" href="index.html" target="_self">🏠 Home / الرئيسية</a>
-      <a class="header-link" href="article1.html" target="_blank">💧 Hydration / الترطيب</a>
-      <a class="header-link" href="article2.html" target="_blank">🍎 Healthy Eating / التغذية</a>
-      <a class="header-link" href="article3.html" target="_blank">💊 Supplements / المكملات</a>
-      <button id="langToggle" class="lang-switch">Toggle EN/ع</button>
-    </div>
-  </div>
+<h1>Fit Nutrition — منتجات صحية ومكملات طبيعية</h1>
 
-  <div class="container">
-    <div class="hero card">
-      <h2 class="post-title">Welcome to Fit Nutrition 🌿 — فيت نيوتريشين</h2>
-      <p class="meta">Short trustworthy tips about healthy living. نصائح قصيرة وموثوقة للحياة الصحية.</p>
-      <div class="grid">
-        <div class="card">
-          <h3 class="post-title">Latest Articles ✨ — أحدث المقالات</h3>
-          <div class="list-articles">
-            <div class="article-link">
-              <div>💧 Hydration — أهمية شرب الماء يوميًا</div>
-              <div><a class="btn" href="article1.html" target="_blank">Read / اقرأ</a></div>
-            </div>
-            <div class="article-link">
-              <div>🍎 Healthy Eating — كيف تختار غذاء صحي</div>
-              <div><a class="btn" href="article2.html" target="_blank">Read / اقرأ</a></div>
-            </div>
-            <div class="article-link">
-              <div>💊 Supplements — دليلك للمكملات الأساسية</div>
-              <div><a class="btn" href="article3.html" target="_blank">Read / اقرأ</a></div>
-            </div>
-          </div>
-        </div>
+<div class="tabs">
+  <button class="tablinks" onclick="openTab(event,'BlackSeed')" id="defaultOpen">Z. Black Seed / زيت حبة البركة</button>
+  <button class="tablinks" onclick="openTab(event,'Dates')">Fresh Dates / تمر طبيعي</button>
+  <button class="tablinks" onclick="openTab(event,'VitaminC')">Vitamin C Chewable / حلوى فيتامين ج</button>
+</div>
 
-        <aside class="card">
-          <h4>About — من نحن</h4>
-          <p class="small">Fit Nutrition provides concise, science-backed nutrition tips. محتوى مبني على مصادر علمية مبسطة.</p>
-          <div class="affiliate small">
-            <strong>Recommended:</strong>
-            <p class="small">Replace links below with your affiliate URLs after signup (Amazon / iHerb).</p>
-            <a href="#" onclick="openAffiliate('https://example.com/aff-REPLACE')" class="small">🔗 Buy multivitamin — مثال رابط أفلييت</a>
-          </div>
-        </aside>
-      </div>
-    </div>
+<!-- مقال 1: Black Seed -->
+<div id="BlackSeed" class="tabcontent">
+<h2>Maju Superfoods Black Seed Oil Gummies — كبسولات زيت حبة البركة</h2>
+<img src="https://s3.iherbimages.com/images/maju/144769/l.jpg" alt="Black Seed Oil Gummies" class="product-img">
 
-    <div class="footer card">
-      <div class="small">Built for quick launch — جاهز للنشر. Replace affiliate links and add analytics later.</div>
-    </div>
-  </div>
+<h3>EN: Introduction</h3>
+<p>Maju Superfoods Black Seed Oil Gummies are a concentrated source of Nigella Sativa oil, known for its active compound Thymoquinone, which supports cardiovascular health, immunity, digestive function, and skin & hair wellness.</p>
 
-  <script src="script.js"></script>
+<h3>AR: المقدمة</h3>
+<p>كبسولات زيت حبة البركة من Maju Superfoods مصدر مركز لزيت حبة البركة، المعروف بالمركب النشط ثيموكوينون، والذي يدعم صحة القلب، المناعة، الهضم، وصحة الجلد والشعر.</p>
+
+<h3>EN: Benefits</h3>
+<ul>
+<li>Supports cardiovascular health by improving cholesterol and blood pressure.</li>
+<li>Boosts immune system due to antimicrobial properties.</li>
+<li>Enhances skin and hair health.</li>
+<li>Anti-inflammatory effects, may reduce arthritis symptoms.</li>
+<li>Supports digestion and gut health.</li>
+</ul>
+
+<h3>AR: الفوائد</h3>
+<ul>
+<li>يدعم صحة القلب والأوعية الدموية من خلال تحسين الكوليسترول وضغط الدم.</li>
+<li>يعزز جهاز المناعة بفضل خصائصه المضادة للبكتيريا والفيروسات.</li>
+<li>يحسن صحة الجلد والشعر.</li>
+<li>خصائص مضادة للالتهابات، قد تقلل أعراض التهاب المفاصل.</li>
+<li>يدعم الهضم وصحة الجهاز الهضمي.</li>
+</ul>
+
+<a href="https://jo.iherb.com/pr/maju-superfoods-black-seed-oil-gummies-90-gummies-250-mg-per-gummy/144769?rcode=IMN3104" class="btn" target="_blank">Buy Black Seed Oil Gummies / اشترِ كبسولات زيت حبة البركة</a>
+
+<h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
+<button class="vote-yes">✅ نعم</button>
+<button class="vote-no">❌ لا</button>
+</div>
+
+<!-- مقال 2: Dates -->
+<div id="Dates" class="tabcontent">
+<h2>Natural Delights Fresh Dates — تمر طبيعي</h2>
+<img src="https://s3.iherbimages.com/images/natd/147660/l.jpg" alt="Fresh Dates" class="product-img">
+
+<h3>EN: Introduction</h3>
+<p>Natural Delights Fresh Dates are a natural, nutrient-rich snack, providing quick energy and essential vitamins and minerals. They are large, soft, and ideal for daily consumption.</p>
+
+<h3>AR: المقدمة</h3>
+<p>تمر طبيعي من ناتشورال ديلايتس وجبة خفيفة طبيعية ومغذية، يوفر طاقة سريعة وعناصر غذائية أساسية من الفيتامينات والمعادن. يتميز بحجمه الكبير وقوامه الطري، مثالي للاستهلاك اليومي.</p>
+
+<h3>EN: Benefits</h3>
+<ul>
+<li>Natural energy source from carbohydrates.</li>
+<li>High fiber content supports digestive health.</li>
+<li>Rich in essential minerals (potassium, magnesium, iron) and vitamins (B6, C).</li>
+<li>Supports heart health by reducing LDL cholesterol.</li>
+<li>Beneficial during pregnancy to potentially aid natural labor.</li>
+</ul>
+
+<h3>AR: الفوائد</h3>
+<ul>
+<li>مصدر طبيعي للطاقة من الكربوهيدرات.</li>
+<li>نسبة عالية من الألياف تدعم صحة الجهاز الهضمي.</li>
+<li>غني بالمعادن الأساسية (بوتاسيوم، مغنيسيوم، حديد) والفيتامينات (B6 وC).</li>
+<li>يدعم صحة القلب عن طريق خفض الكوليسترول الضار.</li>
+<li>مفيد للحوامل، قد يساعد في تسهيل الولادة الطبيعية.</li>
+</ul>
+
+<a href="https://jo.iherb.com/pr/natural-delights-fresh-medjool-dates-whole-1-lb-454-g/147660?rcode=IMN3104" class="btn" target="_blank">Buy Fresh Dates / اشترِ تمر طبيعي</a>
+
+<h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
+<button class="vote-yes">✅ نعم</button>
+<button class="vote-no">❌ لا</button>
+</div>
+
+<!-- مقال 3: Vitamin C -->
+<div id="VitaminC" class="tabcontent">
+<h2>California Gold Nutrition Vitamin C Chewable — حلوى فيتامين ج</h2>
+<img src="https://s3.iherbimages.com/images/cgn/69569/l.jpg" alt="Vitamin C Chewable" class="product-img">
+
+<h3>EN: Introduction</h3>
+<p>California Gold Nutrition Vitamin C Chewable combines vitamin C and vitamin A from beta-carotene, supporting immune health, skin, and cellular protection with a natural, vegetarian-friendly formula.</p>
+
+<h3>AR: المقدمة</h3>
+<p>حلوى فيتامين ج من كاليفورنيا جولد نيوتريشن تجمع بين فيتامين ج وفيتامين أ من البيتا كاروتين، مما يدعم المناعة، صحة الجلد، وحماية الخلايا، بتركيبة طبيعية مناسبة للنباتيين.</p>
+
+<h3>EN: Benefits</h3>
+<ul>
+<li>Boosts immune system and helps fight infections.</li>
+<li>Supports skin health and collagen production.</li>
+<li>Provides antioxidant protection against free radicals.</li>
+<li>Vegetarian-friendly formula, free from gelatin.</li>
+</ul>
+
+<h3>AR: الفوائد</h3>
+<ul>
+<li>يعزز جهاز المناعة ويساعد الجسم على مقاومة الأمراض.</li>
+<li>يدعم صحة الجلد وإنتاج الكولاجين.</li>
+<li>يوفر حماية مضادة للأكسدة ضد الجذور الحرة.</li>
+<li>تركيبة مناسبة للنباتيين وخالية من الجيلاتين.</li>
+</ul>
+
+<a href="https://jo.iherb.com/pr/california-gold-nutrition-vitamin-c-gummies-with-vitamin-a-from-100-beta-carotene-90-vegetarian-gummies/69569?rcode=IMN3104" class="btn" target="_blank">Buy Vitamin C Chewable / اشترِ حلوى فيتامين ج</a>
+
+<h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
+<button class="vote-yes">✅ نعم</button>
+<button class="vote-no">❌ لا</button>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for(i=0;i<tabcontent.length;i++){ tabcontent[i].style.display="none"; }
+  tablinks = document.getElementsByClassName("tablinks");
+  for(i=0;i<tablinks.length;i++){ tablinks[i].className = tablinks[i].className.replace(" active",""); }
+  document.getElementById(tabName).style.display="block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
 </body>
 </html>
