@@ -8,35 +8,58 @@
 body { 
   font-family: Arial, sans-serif; 
   line-height: 1.6; 
-  background-color: #e8f5e9;
+  background-color: #ffe6f0;
+  background-image: url('f72169b3-1136-46b0-a6d1-524cddea1802.png'); /* رابط الصورة النسبي */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
   color: #333; 
   padding: 20px; 
   margin:0;
 }
-h1, h2, h3 { color: #2e7d32; }
+
+h1, h2, h3 { color: #d6336c; }
+
 .btn { 
-  background-color: #43a047; 
+  background-color: #ff4d88; 
   color: white; 
   padding: 10px 20px; 
   text-decoration: none; 
   border-radius: 8px; 
   display: inline-block; 
   margin: 10px 0; 
+  transition: all 0.3s ease;
 }
+.btn:hover { 
+  transform: scale(1.05); 
+  background-color: #e6005c; 
+}
+
 .vote-yes, .vote-no { 
   padding: 6px 12px; 
   margin: 5px; 
   border-radius: 5px; 
   cursor: pointer; 
+  transition: all 0.3s ease;
 }
-.vote-yes { background-color: #43a047; color: white; }
-.vote-no { background-color: #e53935; color: white; }
-.tabs { overflow: hidden; background-color: #2e7d32; border-radius: 8px; margin-bottom: 20px; }
+.vote-yes { background-color: #ff4d88; color: white; }
+.vote-yes:hover { background-color: #e6005c; transform: scale(1.1);}
+.vote-no { background-color: #d6336c; color: white; }
+.vote-no:hover { background-color: #a30042; transform: scale(1.1);}
+
+.tabs { overflow: hidden; background-color: #d6336c; border-radius: 8px; margin-bottom: 20px; }
 .tabs button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; color:white; font-size:16px; transition: 0.3s; }
-.tabs button:hover { background-color: #43a047; }
-.tabs button.active { background-color: #43a047; }
+.tabs button:hover { background-color: #ff4d88; }
+.tabs button.active { background-color: #ff4d88; }
+
 .tabcontent { display: none; padding: 10px 0; border-top: none; }
-.product-img { max-width: 200px; display:block; margin:10px 0; border-radius:8px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  body { padding: 10px; }
+  .tabs button { font-size: 14px; padding: 10px 12px; }
+  .btn { padding: 8px 16px; font-size: 14px; }
+}
 </style>
 </head>
 <body>
@@ -47,19 +70,16 @@ h1, h2, h3 { color: #2e7d32; }
   <button class="tablinks" onclick="openTab(event,'BlackSeed')" id="defaultOpen">Z. Black Seed / زيت حبة البركة</button>
   <button class="tablinks" onclick="openTab(event,'Dates')">Fresh Dates / تمر طبيعي</button>
   <button class="tablinks" onclick="openTab(event,'VitaminC')">Vitamin C Chewable / حلوى فيتامين ج</button>
+  <button class="tablinks" onclick="openTab(event,'DiscountCodes')">Discount Codes / كودات الخصم</button>
 </div>
 
 <!-- مقال 1: Black Seed -->
 <div id="BlackSeed" class="tabcontent">
 <h2>Maju Superfoods Black Seed Oil Gummies — كبسولات زيت حبة البركة</h2>
-<img src="https://i.imgur.com/zsQx0cd.jpg" alt="Black Seed Oil Gummies" class="product-img">
-
 <h3>EN: Introduction</h3>
 <p>Maju Superfoods Black Seed Oil Gummies are a concentrated source of Nigella Sativa oil, known for its active compound Thymoquinone, which supports cardiovascular health, immunity, digestive function, and skin & hair wellness.</p>
-
 <h3>AR: المقدمة</h3>
 <p>كبسولات زيت حبة البركة من Maju Superfoods مصدر مركز لزيت حبة البركة، المعروف بالمركب النشط ثيموكوينون، والذي يدعم صحة القلب، المناعة، الهضم، وصحة الجلد والشعر.</p>
-
 <h3>EN: Benefits</h3>
 <ul>
 <li>Supports cardiovascular health by improving cholesterol and blood pressure.</li>
@@ -68,7 +88,6 @@ h1, h2, h3 { color: #2e7d32; }
 <li>Anti-inflammatory effects, may reduce arthritis symptoms.</li>
 <li>Supports digestion and gut health.</li>
 </ul>
-
 <h3>AR: الفوائد</h3>
 <ul>
 <li>يدعم صحة القلب والأوعية الدموية من خلال تحسين الكوليسترول وضغط الدم.</li>
@@ -77,9 +96,7 @@ h1, h2, h3 { color: #2e7d32; }
 <li>خصائص مضادة للالتهابات، قد تقلل أعراض التهاب المفاصل.</li>
 <li>يدعم الهضم وصحة الجهاز الهضمي.</li>
 </ul>
-
 <a href="https://jo.iherb.com/pr/maju-superfoods-black-seed-oil-gummies-90-gummies-250-mg-per-gummy/144769?rcode=IMN3104" class="btn" target="_blank">Buy Black Seed Oil Gummies / اشترِ كبسولات زيت حبة البركة</a>
-
 <h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
 <button class="vote-yes">✅ نعم</button>
 <button class="vote-no">❌ لا</button>
@@ -88,14 +105,10 @@ h1, h2, h3 { color: #2e7d32; }
 <!-- مقال 2: Dates -->
 <div id="Dates" class="tabcontent">
 <h2>Natural Delights Fresh Dates — تمر طبيعي</h2>
-<img src="https://i.imgur.com/ZcRfBke.jpg" alt="Fresh Dates" class="product-img">
-
 <h3>EN: Introduction</h3>
 <p>Natural Delights Fresh Dates are a natural, nutrient-rich snack, providing quick energy and essential vitamins and minerals. They are large, soft, and ideal for daily consumption.</p>
-
 <h3>AR: المقدمة</h3>
 <p>تمر طبيعي من ناتشورال ديلايتس وجبة خفيفة طبيعية ومغذية، يوفر طاقة سريعة وعناصر غذائية أساسية من الفيتامينات والمعادن. يتميز بحجمه الكبير وقوامه الطري، مثالي للاستهلاك اليومي.</p>
-
 <h3>EN: Benefits</h3>
 <ul>
 <li>Natural energy source from carbohydrates.</li>
@@ -104,7 +117,6 @@ h1, h2, h3 { color: #2e7d32; }
 <li>Supports heart health by reducing LDL cholesterol.</li>
 <li>Beneficial during pregnancy to potentially aid natural labor.</li>
 </ul>
-
 <h3>AR: الفوائد</h3>
 <ul>
 <li>مصدر طبيعي للطاقة من الكربوهيدرات.</li>
@@ -113,9 +125,7 @@ h1, h2, h3 { color: #2e7d32; }
 <li>يدعم صحة القلب عن طريق خفض الكوليسترول الضار.</li>
 <li>مفيد للحوامل، قد يساعد في تسهيل الولادة الطبيعية.</li>
 </ul>
-
 <a href="https://jo.iherb.com/pr/natural-delights-fresh-medjool-dates-whole-1-lb-454-g/147660?rcode=IMN3104" class="btn" target="_blank">Buy Fresh Dates / اشترِ تمر طبيعي</a>
-
 <h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
 <button class="vote-yes">✅ نعم</button>
 <button class="vote-no">❌ لا</button>
@@ -124,14 +134,10 @@ h1, h2, h3 { color: #2e7d32; }
 <!-- مقال 3: Vitamin C -->
 <div id="VitaminC" class="tabcontent">
 <h2>California Gold Nutrition Vitamin C Chewable — حلوى فيتامين ج</h2>
-<img src="https://i.imgur.com/0V6j9xY.jpg" alt="Vitamin C Chewable" class="product-img">
-
 <h3>EN: Introduction</h3>
 <p>California Gold Nutrition Vitamin C Chewable combines vitamin C and vitamin A from beta-carotene, supporting immune health, skin, and cellular protection with a natural, vegetarian-friendly formula.</p>
-
 <h3>AR: المقدمة</h3>
 <p>حلوى فيتامين ج من كاليفورنيا جولد نيوتريشن تجمع بين فيتامين ج وفيتامين أ من البيتا كاروتين، مما يدعم المناعة، صحة الجلد، وحماية الخلايا، بتركيبة طبيعية مناسبة للنباتيين.</p>
-
 <h3>EN: Benefits</h3>
 <ul>
 <li>Boosts immune system and helps fight infections.</li>
@@ -139,7 +145,6 @@ h1, h2, h3 { color: #2e7d32; }
 <li>Provides antioxidant protection against free radicals.</li>
 <li>Vegetarian-friendly formula, free from gelatin.</li>
 </ul>
-
 <h3>AR: الفوائد</h3>
 <ul>
 <li>يعزز جهاز المناعة ويساعد الجسم على مقاومة الأمراض.</li>
@@ -147,25 +152,41 @@ h1, h2, h3 { color: #2e7d32; }
 <li>يوفر حماية مضادة للأكسدة ضد الجذور الحرة.</li>
 <li>تركيبة مناسبة للنباتيين وخالية من الجيلاتين.</li>
 </ul>
-
 <a href="https://jo.iherb.com/pr/california-gold-nutrition-vitamin-c-gummies-with-vitamin-a-from-100-beta-carotene-90-vegetarian-gummies/69569?rcode=IMN3104" class="btn" target="_blank">Buy Vitamin C Chewable / اشترِ حلوى فيتامين ج</a>
-
 <h3>❓ Feedback • هل استفدت من هذا المحتوى؟</h3>
 <button class="vote-yes">✅ نعم</button>
 <button class="vote-no">❌ لا</button>
+</div>
+
+<!-- مقال 4: Discount Codes -->
+<div id="DiscountCodes" class="tabcontent">
+  <h2>Discount Code / كود الخصم</h2>
+  <p>Use this code when shopping on iHerb to get your discount:</p>
+  <h3 style="color:#ff4d88; font-size:1.5em;">IMN3104</h3>
+  <p>استخدم هذا الكود عند التسوق على iHerb للحصول على الخصم:</p>
+  <p>
+    <a href="https://jo.iherb.com/" class="btn" target="_blank">Shop on iHerb / تسوق على iHerb</a>
+    <button class="btn" onclick="copyCode()">Copy Code / انسخ الكود</button>
+  </p>
 </div>
 
 <script>
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
-  for(i=0;i<tabcontent.length;i++){ tabcontent[i].style.display="none"; }
+  for (i=0;i<tabcontent.length;i++){ tabcontent[i].style.display="none"; }
   tablinks = document.getElementsByClassName("tablinks");
-  for(i=0;i<tablinks.length;i++){ tablinks[i].className = tablinks[i].className.replace(" active",""); }
+  for (i=0;i<tablinks.length;i++){ tablinks[i].className = tablinks[i].className.replace(" active",""); }
   document.getElementById(tabName).style.display="block";
   evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen").click();
+
+function copyCode() {
+  navigator.clipboard.writeText('IMN3104').then(() => {
+    alert('Code copied! / تم نسخ الكود!');
+  });
+}
 </script>
 
 </body>
